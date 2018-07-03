@@ -1,8 +1,9 @@
 import * as React from 'react';
 
 export class Header extends React.Component<any> {
-  public onChange = ({ target: { value } }: { target: HTMLInputElement }) => {
-    this.props.onSearch()
+  public onChange = (e: { target: HTMLInputElement }) => {
+    console.log(e.target.value);
+    this.props.onSearch(e.target.value);
   };
 
   public render(): JSX.Element {
